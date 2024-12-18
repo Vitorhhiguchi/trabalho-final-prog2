@@ -3,6 +3,7 @@ package com;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import modelo.Usuario;
 import util.Dao;
@@ -19,7 +20,7 @@ public class UsuarioIncluirControle {
     private TextField campoNome;
     
     @FXML 
-    private TextField campoSenha;
+    private PasswordField campoSenha;
     
     private Usuario usuario;
     private Dao<Usuario> dao;

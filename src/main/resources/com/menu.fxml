@@ -32,13 +32,15 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="481.0" prefWidth="834.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MenuControle">
+<VBox prefHeight="481.0" prefWidth="834.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MenuControle">
   <children>
     <MenuBar styleClass="txt18" VBox.vgrow="NEVER">
       <menus>
@@ -46,18 +48,22 @@
           <items>
             <MenuItem mnemonicParsing="false" onAction="#vacaIncluir" text="Nova" />
                   <MenuItem mnemonicParsing="false" onAction="#vacaAlterar" text="Alterar" />
+                  <MenuItem mnemonicParsing="false" onAction="#vacaExcluir" text="Excluir" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Usuários">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#usuarioIncluir" text="Novo" />
+                  <MenuItem mnemonicParsing="false" onAction="#usuarioAlterar" text="Alterar" />
+                  <MenuItem mnemonicParsing="false" onAction="#usuarioExcluir" text="Excluir" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Produção">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#producaoIncluir" text="Incluir" />
-                  <MenuItem mnemonicParsing="false" text="Listar por período" />
                   <MenuItem mnemonicParsing="false" onAction="#producaoListarPorVaca" text="Listar por vaca " />
+                  <MenuItem mnemonicParsing="false" onAction="#producaoListarDiario" text="Listar por dia" />
+                  <MenuItem mnemonicParsing="false" onAction="#producaoListarMensal" text="Listar por período" />
           </items>
         </Menu>
             <Menu mnemonicParsing="false" text="Sair">
@@ -67,6 +73,13 @@
             </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" stylesheets="@estilos.css" VBox.vgrow="ALWAYS" />
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" stylesheets="@estilos.css" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="lblUsuario" layoutX="363.0" layoutY="202.0" text="Bem-vindo!">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
   </children>
 </VBox>
